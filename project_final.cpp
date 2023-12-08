@@ -62,7 +62,7 @@ int main(int argc, char *argv[]) {
 	int y,z;
 	int r, g, b;
 	
-	cout << "s for square, t for triangle, and c for circle: " ;
+	cout << "r for rectangle, t for triangle, and c for circle: " ;
 	cin >> x;
 
 	if (x == 't'){
@@ -109,7 +109,7 @@ int main(int argc, char *argv[]) {
 
 
 	}
-	} else if (x == 's'){
+	} else if (x == 'r'){
 		cout << "width(1~256): ";
 		cin >> y;
 		if (y < 0 || y > 256){
