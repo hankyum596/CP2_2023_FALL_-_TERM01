@@ -29,7 +29,7 @@ int main(int argc, char* argv[]) {
     const char *filename = argv[1];
 	
 	/* open PNG file for writing */
-	FILE* f = fopen("PrintShape.png", "wb");
+	FILE* f = fopen(filename, "wb");
 	if (!f) {
 
 		fprintf(stderr, "could not open %s\n", filename);
