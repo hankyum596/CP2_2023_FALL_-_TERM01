@@ -1,4 +1,4 @@
-﻿#include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <iostream>
 #include <cmath>
@@ -20,9 +20,9 @@ int main(int argc, char* argv[]) {
 	srand(time(NULL));
 
 	/* open PNG file for writing */
-	FILE* f = fopen("out.png", "wb");
+	FILE* f = fopen("image.png", "wb");
 	if (!f) {
-		fprintf(stderr, "could not open out.png\n");
+		fprintf(stderr, "could not open image.png\n");
 		return 1;
 	}
 
@@ -78,8 +78,13 @@ int main(int argc, char* argv[]) {
 			cout << "error: out of value" << endl;
 			return 0;
 		}
-		cout << "rgb data(0~255): ";
-		cin >> r >> g >> b;
+		cout << "rgb data(0~255): "<< endl;
+		cout << "r :";
+		cin >> r;
+		cout << "g :";
+		cin >> g;
+		cout << "b :";
+		cin >> b;
 		if (r < 0 || r > 255) {
 			cout << "error: out of value" << endl;
 			return 0;
@@ -123,8 +128,13 @@ int main(int argc, char* argv[]) {
 			cout << "error: out of value" << endl;
 			return 0;
 		}
-		cout << "rgb data(0~255): ";
-		cin >> r >> g >> b;
+		cout << "rgb data(0~255): " << endl;
+		cout << "r :";
+		cin >> r;
+		cout << "g :";
+		cin >> g;
+		cout << "b :";
+		cin >> b;
 		if (r < 0 || r > 255) {
 			cout << "error: out of value" << endl;
 			return 0;
@@ -161,7 +171,7 @@ int main(int argc, char* argv[]) {
 			cout << "error: out of value" << endl;
 			return 0;
 		}
-		cout << "rgb data(0~255)";
+		cout << "rgb data(0~255)" << endl;
 		cout << "r :";
 		cin >> r;
 		cout << "g :";
