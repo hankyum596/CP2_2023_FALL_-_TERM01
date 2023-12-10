@@ -20,9 +20,9 @@ int main(int argc, char* argv[]) {
 	srand(time(NULL));
 
 	/* open PNG file for writing */
-	FILE* f = fopen("image.png", "wb");
+	FILE* f = fopen("PrintShape.png", "wb");
 	if (!f) {
-		fprintf(stderr, "could not open image.png\n");
+		fprintf(stderr, "could not open PrintShape.png\n");
 		return 1;
 	}
 
