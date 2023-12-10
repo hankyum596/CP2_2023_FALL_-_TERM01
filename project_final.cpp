@@ -19,10 +19,21 @@ struct Pixel {
 int main(int argc, char* argv[]) {
 	srand(time(NULL));
 
+	 // 인자가 2개가 아닌 경우 사용법 출력 후 종료
+    if (argc != 2) {
+        cerr << "Usage: " << argv[0] << " <output_filename.png>" << endl;
+        return 1;
+    }
+
+    // 커맨드 라인에서 전달된 파일명 가져오기
+    const char *filename = argv[1];
+	
 	/* open PNG file for writing */
 	FILE* f = fopen("PrintShape.png", "wb");
 	if (!f) {
-		fprintf(stderr, "could not open PrintShape.png\n");
+
+		fprintf(stderr, "could not open %s\n", filename);
+
 		return 1;
 	}
 
@@ -128,15 +139,20 @@ int main(int argc, char* argv[]) {
 			cout << "error: out of value" << endl;
 			return 0;
 		}
+
+
 		cout << "rgb data(0~255): " << endl;
+
 		cout << "r :";
 		cin >> r;
 		cout << "g :";
 		cin >> g;
 		cout << "b :";
 		cin >> b;
-		if (r < 0 || r > 255) {
-			cout << "error: out of value" << endl;
+
+		if (r < 0 || r > 255){
+			cout << "error: out of value"<< endl;
+
 			return 0;
 		}
 		if (g < 0 || g > 255) {
@@ -164,7 +180,9 @@ int main(int argc, char* argv[]) {
 
 		}
 	}
+
 	else if (x == 'c') {
+
 		cout << "radius of the circle(1~128): ";
 		cin >> y;
 		if (y < 0 || y > 128) {
