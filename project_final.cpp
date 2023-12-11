@@ -248,6 +248,11 @@ int main(int argc, char* argv[]) {
 	/* clean up PNG-related data structures */
 	png_destroy_write_struct(&png_ptr, &info_ptr);
 
+	/* free allocated memory */
+	for (int row = 0; row < HEIGHT; row++) {
+    	free(row_pointers[row]);
+	}
+	
 	/* close the file */
 	fclose(f);
 	f = NULL;
